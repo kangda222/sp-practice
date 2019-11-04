@@ -9,7 +9,7 @@ import project.sppractice.repository.PostRepository;
 import java.util.Optional;
 
 @Service
-public class PostManagerImpl implements PostManager,BoardManager {
+public class PostManagerImpl implements PostManager, BoardManager {
 
     @Autowired
     PostRepository postRepository;
@@ -33,7 +33,7 @@ public class PostManagerImpl implements PostManager,BoardManager {
     }
 
     @Override
-    public String getType(){
+    public String getType() {
         return "post";
     }
 }

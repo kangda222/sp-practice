@@ -1,5 +1,6 @@
 package project.sppractice.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.sppractice.domain.Board;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class BoardServiceImpl implements BoardService {
 
@@ -39,6 +41,7 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public Post addPost(Post post) throws Exception {
+        log.debug("BoardServiceImpl.addPost");
         return postManager.addPost(post);
     }
 
